@@ -1,0 +1,47 @@
+$primary-color: #c7650a;
+$secondary-color: #1411b6;
+
+body {
+  background-color: $primary-color;
+  color: $secondary-color;
+}
+
+@mixin box-shadow($x, $y, $blur, $color) {
+  -webkit-box-shadow: $x $y $blur $color;
+  -moz-box-shadow: $x $y $blur $color;
+  box-shadow: $x $y $blur $color;
+ }
+  
+
+.btn {
+    @include box-shadow(10px, 10px, 5px, rgba(0, 0, 0, 0.3));
+    border-radius: 8px;
+    color:#c7650a;
+    background-color:white;
+    padding: 10px 20px;
+    margin: 0;
+}
+
+.nav {
+    background-color: $primary-color;
+}
+
+.nav > ul {
+    list-style: none;
+}
+
+.nav >ul >li {
+    display: flex;
+    margin-right: 10px;
+}
+
+ .nav >ul >li > a {
+      text-decoration: none;
+      color: white;
+ }
+
+.nav >ul >li a:hover {
+        color: $secondary-color;
+      }
+
+ 
